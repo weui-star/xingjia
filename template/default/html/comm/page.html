@@ -1,0 +1,38 @@
+<style>
+    .page-num:not(:disabled) {
+        cursor: pointer;
+    }
+    
+    .page-num-current {
+        z-index: 1;
+        color: #fff!important;
+        background-color: #17a2b8!important;
+        border-color: #17a2b8!important;
+    }
+    
+    .page-num,
+    .page-link {
+        position: relative;
+        display: block;
+        padding: .5rem .75rem;
+        margin-left: -1px;
+        line-height: 1.25;
+        color: #17a2b8;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+    }
+</style>
+<!-- 分页 -->
+{pboot:if({page:rows}>0)}
+<nav aria-label="page navigation" class="my-4">
+    <div class="pagination justify-content-center">
+        <a class="page-item page-link" href="{page:index}">首页</a>
+        <a class="page-item page-link" href="{page:pre}">上一页</a> {page:numbar}
+        <!-- 数字条，小屏幕时自动隐藏-->
+        <a class="page-item page-link" href="{page:next}">下一页</a>
+        <a class="page-item page-link" href="{page:last}">尾页</a>
+    </div>
+</nav>
+{else}
+<div class="text-center my-5 text-secondary">未查询到任何数据！</div>
+{/pboot:if}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <title>{pboot:pagetitle}</title>
+    <meta name="keywords" content="{pboot:pagekeywords}">
+    <meta name="description" content="{pboot:pagedescription}">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/index.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/certify.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="hea-hd">
+        <div class="w">
+            <div class="left">您好，欢迎访问原阳兴佳装配式建筑科技厂家官网！关于轻钢别墅造价及建房资料获取，请来电联系我们。</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#" onclick="addFavorite2()">收藏本站</a><span>|</span></li>
+                    <li><a href="/?gbook/">在线留言</a><span>|</span></li>
+                    <li><a href="/?contact/">网站地图</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="w hea-bd">
+        <div class="left">
+            <img src="{pboot:sitelogo}" alt="">
+            <div>
+                <h5>轻钢别墅定制 </h5>
+                <p>兴佳别墅、早住早富</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="{pboot:sitetplpath}/images/24gf-phone24h.png" alt="">
+            <div>
+                <p>定制咨询热线 </p>
+                <h1>{pboot:companymobile}</h1>
+            </div>
+        </div>
+    </div>
+    </header>
+    <!-- logo 结束 -->
+    <!-- nav 开始 -->
+    <nav class="nav">
+        <div class="nav1 w">
+            <ul>
+                <li class="nav-item {pboot:if(0=='{sort:scode}')}active{/pboot:if}">
+                    <a class="nav-link" href="{pboot:sitepath}/">网站首页</a>
+                </li>
+                {pboot:nav num=10 parent=0}
+                <li class="nav-item {pboot:if('[nav:scode]'=='{sort:tcode}')}active{/pboot:if}">
+                    <a class="nav-link" href="[nav:link]">[nav:name]</a>
+                </li>
+                {/pboot:nav}
+            </ul>
+        </div>
+    </nav>
+    <!-- nav 结束 -->
+    <script>
+        // 收藏本站
+        function addFavorite2() {
+
+            var url = window.location || 'http://www.w3cschool.cn';
+
+            var title = document.title;
+
+            var ua = navigator.userAgent.toLowerCase();
+
+            if (ua.indexOf("360se") > -1) {
+
+                alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+
+            } else if (ua.indexOf("msie 8") > -1) {
+
+                window.external.AddToFavoritesBar(url, title); //IE8
+
+            } else if (document.all) {
+
+                try {
+
+                    window.external.addFavorite(url, title);
+
+                } catch (e) {
+
+                    alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+
+                }
+
+            } else if (window.sidebar) {
+
+                window.sidebar.addPanel(title, url, "");
+
+            } else {
+
+                alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+
+            }
+
+        }
+    </script>

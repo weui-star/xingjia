@@ -1,0 +1,28 @@
+.media-left a img {
+    width: 400px;
+    height: 260px;
+    margin-right: 20px;
+}
+
+
+/* 新闻内容 */
+
+.media {
+    display: block;
+}
+
+.cont {
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.cont .media-body {
+    flex: 1;
+}
+
+.cont .media-body span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div class="banner">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                {pboot:slide num=3 gid=1}
+                <div class="swiper-slide"><img src="[slide:src]" alt="[slide:title]"></div>
+                {/pboot:slide}
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <script src="{pboot:sitetplpath}/js/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            autoplay: true,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+
+            },
+        });
+    </script>
+</body>
+
+</html>

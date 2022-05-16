@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新闻中心-兴佳</title>
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    {include file=comm/head.html}
+    <!-- 导航 -->
+    {include file=comm/nav.html}
+    <div class="container pages">
+
+        {include file=comm/position.html}
+
+        <!-- 列表内容 -->
+        <div class="cont-list">
+            {pboot:list scode=2 num=10 page=1}
+            <div class="cont">
+                <div class="media-left">
+                    <a href="[list:link]">
+                        <img class="media-object" src="[list:ico]">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h3>[list:title]</h3>
+                    <p>[list:subtitle len=120]</p>
+                    <div class="media-bot">
+                        <span>[list:date style=Y-m-d]</span>
+                        <a href="[list:link]">查看更多></a></a>
+                    </div>
+
+                </div>
+            </div>
+            {/pboot:list}
+        </div>
+        {include file=comm/page.html}
+    </div>
+    {include file=comm/foot.html}
+</body>
+
+</html>
