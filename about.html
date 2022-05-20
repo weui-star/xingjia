@@ -1,8 +1,0 @@
-{include file=comm/head.html} {include file=comm/nav.html}
-
-<div class="container pages">
-    {include file=comm/position.html}
-    <h2 class="text-center my-4 fs-sm-28 fs-24">{content:title}</h2>
-    <div class="content">{content:content}</div>
-</div>
-{include file=comm/foot.html}
